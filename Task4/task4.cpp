@@ -10,10 +10,11 @@ int main() {
 	string adress;
 	int adressnum;
 	bool married{};
+	string marriedq;
 	float height;
 
 	cout << "Name: ";
-	cin >> name;
+	getline(cin, name);
 
 	cout << "\nAge: ";
 	cin >> age;
@@ -21,13 +22,12 @@ int main() {
 	cout << "\nGender (m/f): ";
 	cin >> gender;
 
-	cout << "\nAdress: ";
+	cout << "\nAdress (street): ";
 	cin >> adress;
 
 	cout << "\nAdress number: ";
 	cin >> adressnum;
 
-	string marriedq;
 	cout << "\nMarried? (true or false): ";
 	cin >> marriedq;
 	if (marriedq == "true") {
