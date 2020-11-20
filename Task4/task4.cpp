@@ -22,20 +22,13 @@ int main() {
 	cout << "\nGender (m/f): ";
 	cin >> gender;
 
-	cout << "\nAdress (street): ";
-	cin >> adress;
+	cin.ignore(1, '\n');
+	cout << "\nAdress: ";
+	getline(cin, adress);
 
-	cout << "\nAdress number: ";
-	cin >> adressnum;
-
-	cout << "\nMarried? (true or false): ";
-	cin >> marriedq;
-	if (marriedq == "true") {
-		married = true;
-	}
-	else if (marriedq == "false") {
-		married = false;
-	}
+	cout << "\nMarried? (write 1 for true or 0 false): ";
+	cin >> married;
+	cin.ignore(1, '\n');
 
 	cout << "\nHeight (In meters): ";
 	cin >> height;
@@ -44,13 +37,8 @@ int main() {
 	cout << name << endl;
 	cout << age << " years old" << endl;
 	cout << gender << endl;
-	cout << adress << " " << adressnum << endl;
-	if (married == true) {
-		cout << "Married" << endl;
-	}
-	else if (married == false) {
-		cout << "Not married" << endl;
-	}
+	cout << adress << endl;
+	cout << "Married: " << boolalpha << married << endl;
 	cout << height << " meters tall" << endl;
 
 	system("pause");
